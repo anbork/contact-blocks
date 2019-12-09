@@ -101,7 +101,7 @@ const blockAttributes = {
 	wordpress: {
 		type: 'url'
 	},
-	website: {
+	whatsapp: {
 		type: 'url'
 	}
 };

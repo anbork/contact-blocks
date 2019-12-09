@@ -30,7 +30,7 @@ export default class Inspector extends Component {
 	render() {
 
 		/* Setup the attributes */
-		const { profileName, profileTitle, profileContent, profileAlignment, profileImgURL, profileImgID, profileFontSize, profileBackgroundColor, profileTextColor, profileLinkColor, twitter, facebook, instagram, pinterest, google, youtube, github, linkedin, wordpress, email, website, profileAvatarShape  } = this.props.attributes;
+		const { profileName, profileTitle, profileContent, profileAlignment, profileImgURL, profileImgID, profileFontSize, profileBackgroundColor, profileTextColor, profileLinkColor, twitter, facebook, instagram, pinterest, google, youtube, github, linkedin, wordpress, email, whatsapp, profileAvatarShape  } = this.props.attributes;
 		const { setAttributes } = this.props;
 
 		/* Avatar shape options */
@@ -102,6 +102,13 @@ export default class Inspector extends Component {
 				<p>{ __( 'Add links to your social media site and they will appear in the bottom of the profile box.', 'contact-blocks' ) }</p>
 
 				<TextControl
+					label={ __( 'Whatsapp', 'contact-blocks' ) }
+					type="url"
+					value={ whatsapp }
+					onChange={ ( value ) => this.props.setAttributes({ whatsapp: value }) }
+				/>
+
+				<TextControl
 					label={ __( 'Twitter URL', 'contact-blocks' ) }
 					type="url"
 					value={ twitter }
@@ -170,13 +177,6 @@ export default class Inspector extends Component {
 					type="url"
 					value={ email }
 					onChange={ ( value ) => this.props.setAttributes({ email: value }) }
-				/>
-
-				<TextControl
-					label={ __( 'Website URL', 'contact-blocks' ) }
-					type="url"
-					value={ website }
-					onChange={ ( value ) => this.props.setAttributes({ website: value }) }
 				/>
 			</PanelBody>
 		</InspectorControls>

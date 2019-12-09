@@ -148,18 +148,27 @@ export default class Edit extends Component {
 						onChange={ ( value ) => setAttributes({ profileTitle: value }) }
 					/>
 
-					<RichText
-						tagName="div"
-						className='cb-profile-text'
-						multiline="p"
-						placeholder={ __( 'Add profile text...', 'contact-blocks' ) }
-						keepPlaceholderOnFocus
-						value={ profileContent }
-						formattingControls={ [ 'bold', 'italic', 'strikethrough', 'link' ] }
-						onChange={ ( value ) => setAttributes({ profileContent: value }) }
-					/>
 
-					<SocialIcons { ...this.props } />
+
+					<div class="cb-row">
+						{ profileContent && (
+							<div class="cb-col cb-col-auto">
+								<RichText
+									tagName="div"
+									className='cb-profile-text'
+									multiline="p"
+									placeholder={ __( 'Add profile text...', 'contact-blocks' ) }
+									keepPlaceholderOnFocus
+									value={ profileContent }
+									formattingControls={ [ 'bold', 'italic', 'strikethrough', 'link' ] }
+									onChange={ ( value ) => setAttributes({ profileContent: value }) }
+								/>
+							</div>
+						) }
+						<div class="cb-col">
+							<SocialIcons { ...this.props } />
+						</div>
+					</div>
 				</div>
 			</ProfileBox>
 		];

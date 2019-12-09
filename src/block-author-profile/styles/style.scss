@@ -6,8 +6,8 @@
  .cb-block-profile {
 	background: #f2f2f2;
 	color: #293038;
-	margin: 0 auto;
-	padding: 3%;
+	margin: 10px auto 0 !important;
+	padding: 5px 10px 5px;
 	border-radius: 5px;
 	margin-bottom: 1.2em;
 	display: flex;
@@ -17,22 +17,40 @@
 
 	.cb-profile-column {
 		display: block;
-		padding: 15px;
-		flex: 3 0 0;
+		padding: 10px;
+		flex: 4 0 0;
 
 		@media only screen and (max-width: 600px) {
-			flex: auto;
+			flex: 6 0 0;
 		}
 	}
 
+
+.cb-row {
+	display: flex;
+	flex-flow: row wrap;	
+}
+
+.cb-col {
+	@media only screen and (max-width: 600px) {
+		width: 100%;
+	}	
+	&.cb-col-auto {
+		
+	}
+}
+
 	.cb-profile-avatar-wrap {
+		padding: 10px;
 		position: relative;
 		z-index: 0;
+		min-width: 120px;
 		flex: 1 0 0;
 
 		@media only screen and (max-width: 600px) {
 			flex: auto;
-			max-width: 210px;
+			max-width: 150px;
+			min-width: 70px;
 			margin: 0 auto;
 		}
 	}
@@ -43,9 +61,15 @@
 		}
 	}
 
+
+	
 	.cb-profile-text {
-		font-size: 18px;
-		padding-top: 1em;
+		font-size: 19px;
+		padding: 15px 10px 0 0;
+		
+		@media only screen and (max-width: 600px) {
+			display: none;
+		}	
 
 		a {
 			color: inherit;
@@ -60,24 +84,32 @@
 
 		p {
 			line-height: 1.6;
+			margin: 5px 0 5px 0;
 
 			&:last-child {
-			margin-bottom: 0;
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	.cb-profile-name {
-		font-size: 1.4em;
+		font-size: 28px !important;
 		font-weight: bold;
 		line-height: 1.2;
-		margin: 0;
+		margin: 0 0 10px 0 !important;
+		font-weight: 700 !important;
+		color: #222;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 19px !important;
+			text-align: left;
+		}		
 	}
 
 	.cb-profile-title {
 		opacity: .8;
 		padding-top: 5px;
-		margin-bottom: 0;
+		margin: 5px 0 0 0;
 	}
 
 	.cb-profile-image-square {
@@ -98,7 +130,6 @@
 
 	.cb-profile-image-wrap {
 		width: 100%;
-		background: #ddd;
 		position: relative;
 		width: 100%;
 
@@ -125,9 +156,6 @@
 		}
 
 		img {
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
 			position: relative;
 			z-index: 5;
 		}
@@ -136,8 +164,24 @@
 	.cb-social-links {
 		list-style: none;
 		margin: 0 0 0 0;
-		padding: 5% 0 0 0;
+		padding: 10px 0 0 0;
 		font-size: 0;
+
+		@media only screen and (max-width: 600px) {
+			text-align: left;
+		}	
+
+		a {
+			display: inline-block;
+			&.instagram {
+				background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+				border-radius: 15%;
+			}
+			svg {
+				width: 50px;
+				height: 50px;
+			}
+		}
 
 		&:empty {
 			display: none;

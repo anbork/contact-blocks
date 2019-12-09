@@ -75,16 +75,20 @@ export default class Save extends Component {
 							value={ profileTitle }
 						/>
 					) }
-
-					{ profileContent && (
-						<RichText.Content
-							tagName="div"
-							className="cb-profile-text"
-							value={ profileContent }
-						/>
-					) }
-
-					<SocialIcons { ...this.props } />
+					<div class="cb-row">
+						{ profileContent && (
+							<div class="cb-col cb-col-auto">
+								<RichText.Content
+									tagName="div"
+									className="cb-profile-text"
+									value={ profileContent }
+								/>
+							</div>
+						) }
+						<div class="cb-col">
+							<SocialIcons { ...this.props } />
+						</div>
+					</div>
 				</div>
 			</ProfileBox>
 		);

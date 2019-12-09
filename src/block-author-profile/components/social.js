@@ -3,6 +3,7 @@
  */
 const { __ } = wp.i18n;
 const { Component } = wp.element;
+import icons from './../utils/icons';
 
 /**
  * Create an SocialIcons wrapper Component
@@ -16,15 +17,27 @@ export default class SocialIcons extends Component {
 	render() {
 		return (
 			<ul className="cb-social-links">
-				{ this.props.attributes.website && !! this.props.attributes.website.length && (
+				{ this.props.attributes.whatsapp && !! this.props.attributes.whatsapp.length && (
 					<li>
-						<a href={ this.props.attributes.website } target="_blank" rel="noopener noreferrer">{ __( 'Website', 'contact-blocks' ) } <i style={ { backgroundColor: this.props.attributes.profileLinkColor } } className="fas fa-link"></i></a>
+						<a href={ this.props.attributes.whatsapp } class="whatsapp" target="_blank" rel="noopener noreferrer">
+							{ icons.whatsapp }
+						</a>
+					</li>
+				) }
+
+				{ this.props.attributes.instagram && !! this.props.attributes.instagram.length && (
+					<li>
+						<a href={ this.props.attributes.instagram } class="instagram" target="_blank" rel="noopener noreferrer">
+							{ icons.instagram }
+						</a>
 					</li>
 				) }
 
 				{ this.props.attributes.twitter && !! this.props.attributes.twitter.length && (
 					<li>
-						<a href={ this.props.attributes.twitter } target="_blank" rel="noopener noreferrer">{ __( 'Twitter', 'contact-blocks' ) } <i style={ { backgroundColor: this.props.attributes.profileLinkColor } } className="fab fa-twitter"></i></a>
+						<a href={ this.props.attributes.twitter } target="_blank" rel="noopener noreferrer">
+							{ icons.whatsapp }
+						</a>
 					</li>
 				) }
 
@@ -34,11 +47,6 @@ export default class SocialIcons extends Component {
 					</li>
 				) }
 
-				{ this.props.attributes.instagram && !! this.props.attributes.instagram.length && (
-					<li>
-						<a href={ this.props.attributes.instagram } target="_blank" rel="noopener noreferrer">{ __( 'Instagram', 'contact-blocks' ) } <i style={ { backgroundColor: this.props.attributes.profileLinkColor } } className="fab fa-instagram"></i></a>
-					</li>
-				) }
 
 				{ this.props.attributes.pinterest && !! this.props.attributes.pinterest.length && (
 					<li>

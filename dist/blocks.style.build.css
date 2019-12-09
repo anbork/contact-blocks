@@ -11,8 +11,8 @@
 .cb-block-profile {
   background: #f2f2f2;
   color: #293038;
-  margin: 0 auto;
-  padding: 3%;
+  margin: 10px auto 0 !important;
+  padding: 5px 10px 5px;
   border-radius: 5px;
   margin-bottom: 1.2em;
   display: -ms-flexbox;
@@ -24,30 +24,44 @@
   width: 100%; }
   .cb-block-profile .cb-profile-column {
     display: block;
-    padding: 15px;
-    -ms-flex: 3 0 0px;
-        flex: 3 0 0; }
+    padding: 10px;
+    -ms-flex: 4 0 0px;
+        flex: 4 0 0; }
     @media only screen and (max-width: 600px) {
       .cb-block-profile .cb-profile-column {
-        -ms-flex: auto;
-            flex: auto; } }
+        -ms-flex: 6 0 0px;
+            flex: 6 0 0; } }
+  .cb-block-profile .cb-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+  @media only screen and (max-width: 600px) {
+    .cb-block-profile .cb-col {
+      width: 100%; } }
   .cb-block-profile .cb-profile-avatar-wrap {
+    padding: 10px;
     position: relative;
     z-index: 0;
+    min-width: 120px;
     -ms-flex: 1 0 0px;
         flex: 1 0 0; }
     @media only screen and (max-width: 600px) {
       .cb-block-profile .cb-profile-avatar-wrap {
         -ms-flex: auto;
             flex: auto;
-        max-width: 210px;
+        max-width: 150px;
+        min-width: 70px;
         margin: 0 auto; } }
   @media only screen and (max-width: 600px) {
     .cb-block-profile .cb-profile-content-wrap {
       text-align: center; } }
   .cb-block-profile .cb-profile-text {
-    font-size: 18px;
-    padding-top: 1em; }
+    font-size: 19px;
+    padding: 15px 10px 0 0; }
+    @media only screen and (max-width: 600px) {
+      .cb-block-profile .cb-profile-text {
+        display: none; } }
     .cb-block-profile .cb-profile-text a {
       color: inherit;
       -webkit-box-shadow: 0 -1px 0 inset;
@@ -58,18 +72,25 @@
         -webkit-box-shadow: 0 -2px 0 inset;
                 box-shadow: 0 -2px 0 inset; }
     .cb-block-profile .cb-profile-text p {
-      line-height: 1.6; }
+      line-height: 1.6;
+      margin: 5px 0 5px 0; }
       .cb-block-profile .cb-profile-text p:last-child {
         margin-bottom: 0; }
   .cb-block-profile .cb-profile-name {
-    font-size: 1.4em;
+    font-size: 28px !important;
     font-weight: bold;
     line-height: 1.2;
-    margin: 0; }
+    margin: 0 0 10px 0 !important;
+    font-weight: 700 !important;
+    color: #222; }
+    @media only screen and (max-width: 600px) {
+      .cb-block-profile .cb-profile-name {
+        font-size: 19px !important;
+        text-align: left; } }
   .cb-block-profile .cb-profile-title {
     opacity: .8;
     padding-top: 5px;
-    margin-bottom: 0; }
+    margin: 5px 0 0 0; }
   .cb-block-profile .cb-profile-image-square {
     position: absolute;
     top: 0;
@@ -84,7 +105,6 @@
     display: none; }
   .cb-block-profile .cb-profile-image-wrap {
     width: 100%;
-    background: #ddd;
     position: relative;
     width: 100%; }
     .cb-block-profile .cb-profile-image-wrap:before {
@@ -105,17 +125,26 @@
       -webkit-box-shadow: none;
               box-shadow: none; }
     .cb-block-profile .cb-profile-image-wrap img {
-      -o-object-fit: cover;
-         object-fit: cover;
-      height: 100%;
-      width: 100%;
       position: relative;
       z-index: 5; }
   .cb-block-profile .cb-social-links {
     list-style: none;
     margin: 0 0 0 0;
-    padding: 5% 0 0 0;
+    padding: 10px 0 0 0;
     font-size: 0; }
+    @media only screen and (max-width: 600px) {
+      .cb-block-profile .cb-social-links {
+        text-align: left; } }
+    .cb-block-profile .cb-social-links a {
+      display: inline-block; }
+      .cb-block-profile .cb-social-links a.instagram {
+        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -o-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        border-radius: 15%; }
+      .cb-block-profile .cb-social-links a svg {
+        width: 50px;
+        height: 50px; }
     .cb-block-profile .cb-social-links:empty {
       display: none; }
     .cb-block-profile .cb-social-links li {
