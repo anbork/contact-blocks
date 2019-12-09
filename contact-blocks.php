@@ -2,6 +2,7 @@
 /**
  * Plugin Name: Contact Blocks for Gutenberg Editor
  * Plugin URI: https://github.com/tonborzenko/contact-blocks
+ * GitHub Plugin URI: https://github.com/tonborzenko/contact-blocks
  * Description: Contact Blocks — is a small collection with messengers and personal contact info.
  * Author: tonborzenko
  * Author URI: https://github.com/tonborzenko
